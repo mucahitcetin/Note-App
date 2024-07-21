@@ -1,10 +1,45 @@
-import { Form, Col, Row, Stack, Button } from "react-bootstrap";
+import { Button, Col, Form, Row, Stack } from "react-bootstrap";
+import { CreateProps } from "../pages/Create";
+import { FormEvent, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import ReactSelect from "react-select/creatable";
+import { Tag } from "../types";
+import { v4 } from "uuid";
 
-Form;
+const CustomForm = ({
+  availableTags,
+  handleSubmit,
+  createTag,
+  markdown = "",
+  title = "",
+  tags = [],
+}: CreateProps) => {
+  const navigate = useNavigate();
 
-const CustomForm = () => {
+  // state
+  const [selectedTags, setSelectedTags] = useState<Tag[]>(tags);
+
+  // form elemanlarının refaransının al
+  const inputRef = useRef<HTMLInputElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // form gönderilince çalışır
+  const handleSend = (e: FormEvent) => {
+    e.preventDefault();
+
+    // yeni note'u state kaydet
+    handleSubmit({
+      title: inputRef.current?.value as string,
+      markdown: textareaRef.current?.value as string,
+      tags: selectedTags,
+    });
+
+    // anasayfaya yönlendir
+    navigate("/");
+  };
+
   return (
-    <Form>
+    <Form onSubmit={handleSend} className="mt-4">
       <Stack>
         {/* tittle area */}
         <Row>
@@ -17,7 +52,23 @@ const CustomForm = () => {
           <Col>
             <Form.Group>
               <Form.Label>Etiketler</Form.Label>
-              <Form.Control type="text" placeholder="First Name" />
+              <ReactSelect
+                onChange={(allTags) => setSelectedTags(allTags as Tag[])}
+                onCreateOption={(text: string) => {
+                  //etiket nesnesi oluştur ve id ekle
+                  const newTag: Tag = { label: text, value: v4() };
+
+                  //yeni etiketi locale kaydet
+                  createTag(newTag);
+
+                  //seçili etiketler state'ine ekle
+                  setSelectedTags([...selectedTags, newTag]);
+                }}
+                value={selectedTags}
+                options={availableTags}
+                isMulti
+                className="text-black"
+              />
             </Form.Group>
           </Col>
         </Row>
