@@ -1,9 +1,9 @@
 import { Button, Col, Form, Row, Stack } from "react-bootstrap";
-import { CreateProps } from "../pages/Create";
+import { CreateProps } from "../../pages/Create";
 import { FormEvent, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactSelect from "react-select/creatable";
-import { Tag } from "../types";
+import { Tag } from "../../types";
 import { v4 } from "uuid";
 
 const CustomForm = ({
