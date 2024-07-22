@@ -50,7 +50,7 @@ const CustomForm = ({
             </Form.Group>
           </Col>
           <Col>
-            <Form.Group>
+            <Form.Group controlId="tags">
               <Form.Label>Etiketler</Form.Label>
               <ReactSelect
                 onChange={(allTags) => setSelectedTags(allTags as Tag[])}
@@ -74,9 +74,11 @@ const CustomForm = ({
         </Row>
 
         {/* content area */}
-        <Form.Group>
-          <Form.Label>İçerik (markdown destekler)</Form.Label>
+        <Form.Group controlId="markdown" className="mt-4">
+          <Form.Label>İçeirk (markdown destekler)</Form.Label>
           <Form.Control
+            defaultValue={markdown}
+            ref={textareaRef}
             as="textarea"
             style={{ minHeight: "300px", maxHeight: "500px" }}
           />
