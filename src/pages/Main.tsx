@@ -14,14 +14,15 @@ const Main = ({ notes, availableTags }: Props) => {
   const [title, setTitle] = useState<string>("");
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
 
-  const filtredNotes = notes.filter(
-    (note) =>
-      note.title &&
-      note.title.toLowerCase().includes(title.toLowerCase()) &&
+  const filtredNotes = notes.filter((note) => {
+    const noteTitle = note.title ? note.title.toLowerCase() : "";
+    return (
+      noteTitle.includes(title.toLowerCase()) &&
       selectedTags.every((s_tag) =>
-        note.tags.some((noteTag) => noteTag.value == s_tag.value)
+        note.tags.some((noteTag) => noteTag.value === s_tag.value)
       )
-  );
+    );
+  });
 
   return (
     <div className="container mx-auto py-5">

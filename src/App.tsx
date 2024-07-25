@@ -31,7 +31,7 @@ const App = () => {
 
   //notu silen fonksiyon
   const deleteNote = (id: string): void => {
-    setNotes(notes.filter((n) => n.id === id));
+    setNotes(notes.filter((n) => n.id !== id));
   };
 
   //notu düzenleyen fonksiyon

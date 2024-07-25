@@ -26,7 +26,7 @@ const NoteCard = ({ note }: Props) => {
             gap={2}
           >
             {note.tags.map((tag) => (
-              <Badge>{tag.label}</Badge>
+              <Badge key={tag.value}>{tag.label}</Badge>
             ))}
           </Stack>
         </Stack>

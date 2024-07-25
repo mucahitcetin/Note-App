@@ -75,7 +75,7 @@ const CustomForm = ({
 
         {/* content area */}
         <Form.Group controlId="markdown" className="mt-4">
-          <Form.Label>İçeirk (markdown destekler)</Form.Label>
+          <Form.Label>İçerik (markdown destekler)</Form.Label>
           <Form.Control
             defaultValue={markdown}
             ref={textareaRef}
