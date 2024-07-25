@@ -41,12 +41,12 @@ const CustomForm = ({
   return (
     <Form onSubmit={handleSend} className="mt-4">
       <Stack>
-        {/* tittle area */}
+        {/* Başlık - Etiket Inputu */}
         <Row>
           <Col>
-            <Form.Group>
+            <Form.Group controlId="title">
               <Form.Label>Başlık</Form.Label>
-              <Form.Control type="text" placeholder="First Name" />
+              <Form.Control defaultValue={title} ref={inputRef} />
             </Form.Group>
           </Col>
           <Col>
@@ -73,7 +73,7 @@ const CustomForm = ({
           </Col>
         </Row>
 
-        {/* content area */}
+        {/* içerik */}
         <Form.Group controlId="markdown" className="mt-4">
           <Form.Label>İçerik (markdown destekler)</Form.Label>
           <Form.Control
