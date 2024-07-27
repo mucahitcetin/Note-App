@@ -5,5 +5,5 @@
 
 .note_card:hover {
   transform: translate(10px, -10px);
-  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+  filter: drop-shadow(0 0 20px rgba(15, 112, 202, 0.732));
 }

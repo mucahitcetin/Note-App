@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import ReactSelect from "react-select/creatable";
 import { Tag } from "../../types";
 import { v4 } from "uuid";
+import { Link } from "react-router-dom";
 
 const CustomForm = ({
   availableTags,
@@ -92,10 +93,9 @@ const CustomForm = ({
           className="justify-content-end mt-5"
         >
           <Button type="submit">Kaydet</Button>
-          <Button type="button" variant="secondary">
-            {" "}
-            Geri
-          </Button>
+          <Link to="/">
+            <Button variant="secondary">İptal</Button>
+          </Link>
         </Stack>
       </Stack>
     </Form>

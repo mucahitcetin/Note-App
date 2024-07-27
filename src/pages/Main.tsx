@@ -60,7 +60,7 @@ const Main = ({ notes, availableTags }: Props) => {
       </Form>
 
       {/* Not List */}
-      <Row xs={1} sm={2} lg={3} xl={4} className="g-3 mt-4">
+      <Row xs={1} sm={2} lg={3} xl={4} className="g-3 mt-4 ">
         {filtredNotes.map((note) => (
           <Col key={note.id}>
             <Card note={note} />

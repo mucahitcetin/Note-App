@@ -14,7 +14,7 @@ const NoteCard = ({ note }: Props) => {
       onClick={() => navigate(`/note/${note.id}`)}
       className={styles.note_card}
     >
-      <Card.Body>
+      <Card.Body className={styles.note_card}>
         <Stack
           className="align-items-center h-100 justify-content-between"
           gap={2}

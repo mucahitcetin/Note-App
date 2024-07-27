@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #39928c;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,8 +26,9 @@ a:hover {
 body {
   margin: 0;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #b95144;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -65,4 +66,18 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.note_card {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.note_card:hover {
+  transform: translate(10px, -10px);
+  filter: drop-shadow(0 0 20px rgba(9, 120, 225, 0.732));
+}
+
+.card_bg {
+  background: linear-gradient(to left, #bea6b2cf, #44b7b950);
 }
