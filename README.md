@@ -4,6 +4,7 @@ Note-App, kullanıcıların notlarını kolay ve düzenli bir şekilde tutmalar�
 Canlı: https://note-app-nu-puce.vercel.app/
 
 <h2>Teknolojiler ve Kütüphaneler</h2>
+
 -React
 -React Router DOM
 -React Bootstrap
