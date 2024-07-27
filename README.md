@@ -19,19 +19,21 @@ Canlı: https://note-app-nu-puce.vercel.app/
 
 <h2>Proje İçeriği</h2>
 
-<h3>Ana Sayfa</h3>
+<ul>
+<li>Ana Sayfa</li>
 Kullanıcıların mevcut notlarını kartlar halinde görsel olarak listeleyen ana sayfa. Her kart, notun başlığını ve kısa bir önizlemesini içerir.
-<h3>Not Oluşturma</h3>
+<li>Not Oluşturma</li>
 Yeni bir not oluşturmak için kullanıcıların başlık, etiketler ve Markdown formatında açıklama girebilecekleri bir form sunar. Kullanıcılar, bu form aracılığıyla notlarını kolayca ekleyebilirler.
-<h3>Not Detayları</h3>
+<li>Not Detayları</li>
 Ana sayfadaki not kartlarına tıklayarak notun detay sayfasına erişebilirler. Bu sayfa, notun tam içeriğini gösterir ve kullanıcılara notlarını inceleme imkanı sunar.
-<h3>Not Düzenleme ve Silme</h3>
+<li>Not Düzenleme ve Silme</li>
 Kullanıcılar, not detay sayfasında notlarını düzenleyebilir veya silebilirler. Düzenleme butonuna tıklayarak notun içeriğini değiştirebilir ve güncelleyebilirler. Silme butonu ile notu tamamen kaldırabilirler.
-<h3>Etiket Filtreleme</h3>
+<li>Etiket Filtreleme</li>
 Notlar, etiketlere göre filtrelenebilir. Kullanıcılar, belirli etiketlere sahip notları hızlıca bulabilir ve inceleyebilirler.
-<h3>Responsive Tasarım</h3>
+<li>Responsive Tasarım</li>
 Note-App, farklı cihazlarda sorunsuz bir kullanıcı deneyimi sunmak için responsive tasarıma sahiptir. Mobil, tablet ve masaüstü cihazlarda kolayca kullanılabilir.
 Note-App projesi, kullanıcıların notlarını modern ve kullanıcı dostu bir arayüzle yönetmelerini sağlar.
+</ul>
 
 <h2>Ekran Görüntüsü</h2>
 
