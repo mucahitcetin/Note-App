@@ -5,15 +5,17 @@ Canlı: https://note-app-nu-puce.vercel.app/
 
 <h2>Teknolojiler ve Kütüphaneler</h2>
 
--React
--React Router DOM
--React Bootstrap
--React Select
--React Markdown
--TypeScript
--Vite
--Bootstrap
--UUID
+<ul>
+  <li>React</li>
+  <li>React Router DOM</li>
+  <li>React Bootstrap</li>
+  <li>React Select</li>
+  <li>React Markdown</li>
+  <li>TypeScript</li>
+  <li>Vite</li>
+  <li>Bootstrap</li>
+  <li>UUID</li>
+</ul>
 
 <h2>Proje İçeriği</h2>
 
